@@ -1,0 +1,45 @@
+<h3>Product List</h3>
+<table class="table table-striped w-auto">
+    <tr class="table-info">
+        <th scope="row">Id</th>
+        <th scope="row">Product-Name</th>
+        <th scope="row">Price</th>
+        <th scope="row">Photo</th>
+        <th scope="row">Buy Now</th>
+    </tr>
+    <tr  class="table-info" *ngFor="let product of products">
+        <td>{{product.id}}</td>
+        <td>{{product.name}}</td>
+        <td>{{product.price}}</td>
+        <td>
+            <img class="img" src="assets/http://learningprogramming.net/wp-content/uploads/mean_stack/angular/{{product.photo}} ">
+        </td>
+        <td>
+            <a [routerLink]="['/cart', { id:product.id }]">Buy Now</a>
+        </td>
+    </tr>
+</table>
+
+<!-- Card -->
+<div class="card" *ngFor="let product of products">
+
+    <!-- Card image -->
+    <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" alt="Card image cap">
+  
+    <!-- Card content -->
+    <div class="card-body">
+  
+      <!-- Title -->
+      <p class="card-title"><a>{{product.id}}</a></p>
+      <h4 class="card-title"><a>{{product.name}}</a></h4>
+      <!-- Text -->
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+        content.</p>
+      <!-- Button -->
+      <p>Price-:{{product.price}}</p>
+      <a href="#" class="btn btn-primary">Buy Now</a>
+  
+    </div>
+  
+  </div>
+  <!-- Card -->

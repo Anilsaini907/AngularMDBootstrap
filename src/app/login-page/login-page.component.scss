@@ -1,0 +1,25 @@
+.card{
+    margin:auto;
+    width: auto;
+    margin-top: 10px ;
+    margin-bottom: 10px;
+}
+.card-header{
+    display: inline-block;
+}
+
+/*@media screen and (min-width: 768px) {
+    body {
+        background-color: red;
+         
+      }
+}*/
+$breakpoint-tablet: 500px;
+@media screen and (min-width: $breakpoint-tablet) {
+    .card {
+        margin:auto;
+        width: 370px;
+        margin-top: 10px ;
+    margin-bottom: 10px;
+      }
+}

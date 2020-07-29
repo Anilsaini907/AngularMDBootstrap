@@ -1,0 +1,29 @@
+.navbar-brand img{
+   height: 55px;
+   width: 75px;
+   border-radius: 50px;
+}
+
+.footer{
+   height: 40px;
+}
+#Login li{
+   margin: 6px;
+   
+}
+.mat-icon{
+   display: block;
+}
+
+.form-control{
+   width: 330px;
+   margin-left: 350px;
+}
+
+$breakpoint-tablet: 508px;
+@media screen and (max-width: $breakpoint-tablet) {
+   .form-control{
+      width: 380px;
+      margin:auto;
+   }
+}

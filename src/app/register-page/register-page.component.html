@@ -1,0 +1,35 @@
+<!-- Default form register -->
+<form [formGroup]="form" (ngSubmit)="onSubmit()" id="register" class="text-center border border-light p-5 " style="color: #757575;" action="#!">
+
+    <h5 class=" unique-color white-text text-center py-3 mt-1">
+       <p> <mat-icon>how_to_reg</mat-icon></p>
+        <span>Register Here!</span>
+    </h5>
+
+    <div class="form-row mb-5">
+        <div class="col">
+            <!-- First name -->
+            <input type="text" id="defaultRegisterFormFirstName" formControlName="fristname" class="form-control" placeholder="First name">
+        </div>
+        <div class="col">
+            <!-- Last name -->
+            <input type="text" id="defaultRegisterFormLastName" formControlName="lastname" class="form-control" placeholder="Last name">
+        </div>
+    </div>
+
+    <!-- E-mail -->
+    <input type="email" id="defaultRegisterFormEmail" formControlName="email" class="form-control mb-4" placeholder="E-mail">
+
+    <!-- Password -->
+    <input type="password" id="defaultRegisterFormPassword" formControlName="password" class="form-control" placeholder="Password" aria-describedby="defaultRegisterFormPasswordHelpBlock">
+    <small id="defaultRegisterFormPasswordHelpBlock" class="form-text text-muted mb-4">
+        At least 8 characters and 1 digit
+    </small>
+
+    <!-- Phone number -->
+    <input type="text" id="defaultRegisterPhonePassword" formControlName="phone" class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+    
+      <!-- Sign up button -->
+      <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign In</button>
+</form>
+<!-- Default form register -->

@@ -1,4 +1,6 @@
 <!-- Default form register -->
+<div  [style.display]="showReg ? 'block' : 'none'" class="overlay" >
+ <div class="px-lg-5 pt-0">   
 <form [formGroup]="form" (ngSubmit)="onSubmit()" id="register" class="text-center border border-light p-5 " style="color: #757575;" action="#!">
 
     <h5 class=" unique-color white-text text-center py-3 mt-1">
@@ -9,11 +11,11 @@
     <div class="form-row mb-5">
         <div class="col">
             <!-- First name -->
-            <input type="text" id="defaultRegisterFormFirstName" formControlName="fristname" class="form-control" placeholder="First name">
+            <input type="text" id="defaultRegisterFormFirstName" formControlName="fristname"   class="form-control" placeholder="First name">
         </div>
         <div class="col">
             <!-- Last name -->
-            <input type="text" id="defaultRegisterFormLastName" formControlName="lastname" class="form-control" placeholder="Last name">
+            <input type="text" id="defaultRegisterFormLastName" formControlName="lastname"  class="form-control" placeholder="Last name">
         </div>
     </div>
 
@@ -27,9 +29,13 @@
     </small>
 
     <!-- Phone number -->
-    <input type="text" id="defaultRegisterPhonePassword" formControlName="phone" class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
+    <input type="text" id="defaultRegisterPhonePassword" formControlName="phone"  class="form-control" placeholder="Phone number" aria-describedby="defaultRegisterFormPhoneHelpBlock">
     
       <!-- Sign up button -->
       <button class="btn btn-outline-info btn-rounded btn-block my-4 waves-effect z-depth-0" type="submit">Sign In</button>
-</form>
+      <p>Already a member?
+        <a (click)="gotoList();">Login here</a>
+      </p><p class="btn btn-dark" data-dismiss="modal" (click)="hide()">Close</p> 
+</form> </div>
 <!-- Default form register -->
+</div>

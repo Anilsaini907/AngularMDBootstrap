@@ -1,14 +1,19 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { LoginPageComponent } from './login-page/login-page.component';
-import { RegisterPageComponent } from './register-page/register-page.component';
-import { ProductListComponent } from './product-list/product-list.component';
+import { LoginPageComponent } from './user/login-page/login-page.component';
+import { RegisterPageComponent } from './user/register-page/register-page.component';
+import { ProductListComponent } from './product/product-list/product-list.component';
+import { ContactPageComponent } from './contact-page/contact-page.component';
+import { AppComponent } from './app.component';
 
 
 const routes: Routes = [
   { path: 'login-page', component: LoginPageComponent },
   { path: 'product-list', component: ProductListComponent },
   { path: 'register-page', component: RegisterPageComponent },
+  { path: 'contact-page', component: ContactPageComponent },
+  { path: '', redirectTo: '/login-page', pathMatch: 'full' },
+ 
 ];
 
 @NgModule({

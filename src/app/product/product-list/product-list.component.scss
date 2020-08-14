@@ -1,0 +1,54 @@
+
+.card{
+    display: inline-block;
+    width: 300px;
+    height :auto;
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+.card-img-top{
+    margin-top: 5px;
+    margin-left: 40px;
+height: 150px;
+width: auto;
+}
+
+/*, *::before, *::after {
+    box-sizing: border-box;
+    border-radius: 20px;
+    margin-right: 20px;
+    margin-left: 10px;
+}*/
+.img-fluid{
+    border-radius: 20px;
+    height: 200px;
+    width: 300px;
+    margin-top:70px;
+}
+#carouselExampleFade{
+    width: 75%;
+    margin-left: 170px;
+    margin-bottom: 20px;
+
+}
+.carousel-inner{
+    border-radius: 50px;
+   
+}
+#carousel-with-lb{
+    margin-top: -65px;
+}
+h4{ text-align: center;
+   text-shadow: green($color: #000000); 
+   text-decoration:underline;
+   margin-bottom:15px;
+}
+$breakpoint-tablet: 1200px;
+@media screen and (max-width: $breakpoint-tablet) {
+       
+#carouselExampleFade{
+
+    margin:auto;
+    margin-bottom: 20px;
+}
+}

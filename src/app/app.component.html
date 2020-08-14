@@ -1,20 +1,28 @@
 <body id="body">
 <!--Navbar-->
-<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark unique-color" [containerInside]="false">
+<div id="navbar">
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark unique-color fixed-top" [containerInside]="false">
 
   <!-- Navbar brand -->
-  <mdb-navbar-brand><a  class="navbar-brand"><img src="assets/images/Logo.png"></a></mdb-navbar-brand>
+  <mdb-navbar-brand><a  class="navbar-brand"><img  class="img-fluid"  src="assets/images/Logo.png"></a></mdb-navbar-brand>
 
   <!-- Collapsible content -->
   <links>
 
     <!-- Links -->
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-        <a class="nav-link waves-light" mdbWavesEffect>About Us</a>
+      <li class="nav-item dropdown" dropdown>
+        <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
+          About<span class="caret"></span></a>
+        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">App design</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Mobile design</a>
+          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Eccomerce app</a>
+          
+        </div>
       </li>
       <li class="nav-item">
-        <a class="nav-link waves-light" mdbWavesEffect>Carrer</a>
+        <a class="nav-link waves-light" routerLink="/contact-page" routerLinkActive="active" mdbWavesEffect>Contact-us</a>
       </li>
       <li class="nav-item">
         <a class="nav-link waves-light" routerLink="/product-list" routerLinkActive="active" mdbWavesEffect>Product-List</a>
@@ -28,7 +36,7 @@
           <a class="dropdown-item waves-light" mdbWavesEffect href="#">App design</a>
           <a class="dropdown-item waves-light" mdbWavesEffect href="#">Mobile design</a>
           <a class="dropdown-item waves-light" mdbWavesEffect href="#">Eccomerce app</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Andriod app</a>
+          
         </div>
       </li>
 
@@ -41,25 +49,46 @@
 
     <ul id="Login" class="navbar-nav ml- nav-flex-icons">
       <li class="nav-item">
-        <a style="display: block;"class="nav-link" routerLink="/login-page" routerLinkActive="active" > <mat-icon>account_box</mat-icon><span>Login</span></a>
+        <a class="nav-link" routerLink="/register-page"    routerLinkActive="active"> <mat-icon>add_shopping_cart</mat-icon>
+          Cart</a>
+      </li>
+
+      <li class="nav-item">
+        <a style="display: block;"class="nav-link"  routerLink="/login-page" routerLinkActive="active" > <mat-icon>account_box</mat-icon><span>Login</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/register-page" routerLinkActive="active"> <mat-icon>how_to_reg</mat-icon>Sign-up</a>
+        <a class="nav-link" routerLink="/register-page"    routerLinkActive="active"> <mat-icon>how_to_reg</mat-icon>Sign-up</a>
       </li>
       
     </ul>
   </links>
   <!-- Collapsible content -->
 </mdb-navbar>
+</div>
+<!--/.Navbar-->
+
+
+  <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      Dropdown button
+    </button>
+    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      <a class="dropdown-item" href="#">Action</a>
+      <a class="dropdown-item" href="#">Another action</a>
+      <a class="dropdown-item" href="#">Something else here</a>
+    </div>
+  </div>
+
 <!--/.Navbar-->
 
 <router-outlet></router-outlet>
+
 <!-- Footer -->
 <footer class="page-footer font-small unique-color fixed-bottom">
 
   <!-- Copyright -->
   <div class="footer-copyright text-center py-3">© 2020 Copyright:
-    <a href="https://mdbootstrap.com/"> MDBootstrap.com</a>
+    <a href="https://mdbootstrap.com/"> We are community</a>
   </div>
   <!-- Copyright -->
 

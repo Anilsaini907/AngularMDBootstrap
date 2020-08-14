@@ -1,16 +1,59 @@
+
+#navbarMain{
+   height: 20px;
+   margin-bottom: auto;
+}
+body {
+      margin-top: 60px;
+}
+.Itemlist li{
+   color:black;
+   transition: .35s;
+}
+.Itemlist ul{
+ margin:auto;
+}
+.Itemlist li{
+
+   margin:25px;
+  }
 .navbar-brand img{
-   height: 55px;
-   width: 75px;
+   height: 20px;
+   width: 45px;
    border-radius: 50px;
 }
+#list{
+   display: inline;
+}
+.form-control{
+   width: 200px;
+}
+#imagemodal{
+   margin-top: 120px;
+}
+$breakpoint-tablet: 800px;
+@media screen and (max-width: $breakpoint-tablet) {
+   input[type="text"]{
+      width: auto;
+   }
+}
+input[type="text"] {
+   width: 430px;
+}
+
+.dropdown:hover>.dropdown-menu {
+   display: block;
+ }
+ 
+ .dropdown>.dropdown-toggle:active {
+   /*Without this, clicking will make it sticky*/
+     pointer-events: none; }
+ 
 
 .footer{
    height: 40px;
 }
-#Login li{
-   margin: 6px;
-   
-}
+
 .mat-icon{
    display: block;
 }
@@ -27,3 +70,42 @@ $breakpoint-tablet: 508px;
       margin:auto;
    }
 }
+.card{   
+   width: auto;
+   margin-top: 70px ;
+   
+}
+.card-header{
+   display: inline-block;
+   
+}
+
+/*@media screen and (min-width: 768px) {
+   body {
+       background-color: red;
+        
+     }
+}*/
+$breakpoint-tablet: 500px;
+@media screen and (min-width: $breakpoint-tablet) {
+   .card {
+       margin:auto;
+       width: 370px;
+       margin-top: 80px ;
+      
+     }
+}
+.overlay {
+ 
+   position: fixed;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background:#E2D8D6 ;
+   transition: opacity 500ms;
+   visibility:visible;
+   opacity: 0.8;
+   z-index: 2;
+ }
+ 

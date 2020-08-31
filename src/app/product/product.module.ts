@@ -4,11 +4,14 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { RouterModule } from '@angular/router';
 import { MDBBootstrapModule, CarouselModule } from 'angular-bootstrap-md';
 import * as $ from 'jquery';
+import { Product } from 'src/app/product';
+import { ProductCartComponent } from './product-cart/product-cart.component';
+
 
 
 @NgModule({
   declarations: [
-    ProductListComponent
+    ProductListComponent,ProductCartComponent
   ],
   imports: [
     CarouselModule,

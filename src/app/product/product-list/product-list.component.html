@@ -152,7 +152,7 @@
 <!-- Card -->
 <div class="view overlay hm-blue-light" class="col-md-3" class="card" *ngFor="let product of products">
     <!-- Card image -->
-    <img  class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/43.jpg" alt="Card image cap">
+    <img  class="card-img-top" [src]="product.photo" alt="Card image cap" >
     <div  class="mask flex-center">
       <p class="white-text">Click Here !!!</p>
   </div>
@@ -167,9 +167,12 @@
         content.</p>
       <!-- Button -->
       <p>Price-:{{product.price}}</p>
-      <a href="#" class="btn btn-primary">Buy Now</a>
-  
+      <a href="#" class="btn btn-primary">Buy Now</a> 
+      <button (click)="addToCart(product)">Add to cart</button>  
+   
     </div>
   
   </div>
+
+  
   <!-- Card -->

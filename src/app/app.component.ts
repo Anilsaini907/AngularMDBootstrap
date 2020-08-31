@@ -12,7 +12,7 @@ import { environment } from 'src/app/Appenvironment';
 })
 export class AppComponent {
 title = 'angulartoastr';
-  
+value:any=[];
   ispopUpShow:boolean;
   registerForm: FormGroup;
   submitted = false;
@@ -24,28 +24,11 @@ title = 'angulartoastr';
 gotoList() {
   this.router.navigate(['/register-page']);
 }
-
-  //closeResult: string;
-  
-  ngOnInit(): void {
-
-   
-  /*open(content) {
-    this.modalService.open(content, {ariaLabelledBy: 'modal-basic-title'}).result.then((result) => {
-      this.closeResult = `Closed with: ${result}`;
-    }, (reason) => {
-      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
-    });
+  showValue(){
+  this.value=JSON.parse(localStorage.getItem('Users'))
   }
   
-  private getDismissReason(reason: any): string {
-    if (reason === ModalDismissReasons.ESC) {
-      return 'by pressing ESC';
-    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
-      return 'by clicking on a backdrop';
-    } else {
-      return  `with: ${reason}`;
-    }
-  }*/
+  ngOnInit(): void {
+    this.showValue()
 }
 }

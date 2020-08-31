@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/product';
+import { ProductService } from '../product.service';
 
 
 @Component({
@@ -9,39 +10,29 @@ import { Product } from 'src/app/product';
 })
 export class ProductListComponent implements OnInit {
   products: Product[];
-  constructor() { }
+  cartData:any[]=[];
+  newProduct:{};
+  constructor(private productservice:ProductService) { }
+  
 
   ngOnInit(): void {
    
     this.products = [
-      { id: 'p01', name: 'name 1', price: 100, photo: 'thumb1.gif' },
-      { id: 'p02', name: 'name 2', price: 200, photo: 'thumb2.gif' },
-      { id: 'p03', name: 'name 3', price: 300, photo: 'thumb3.gif' },
-      { id: 'p01', name: 'name 1', price: 100, photo: 'thumb1.gif' },
-      { id: 'p02', name: 'name 2', price: 200, photo: 'thumb2.gif' },
-      { id: 'p03', name: 'name 3', price: 300, photo: 'thumb3.gif' }
+      { id: 'p01', name: 'name 1', price: 100, photo: 'https://mdbootstrap.com/img/Photos/Others/images/43.jpg' },
+      { id: 'p02', name: 'name 2', price: 200, photo: 'https://mdbootstrap.com/img/Photos/Others/images/43.jpg' },
+      { id: 'p03', name: 'name 3', price: 300, photo: 'https://mdbootstrap.com/img/Photos/Others/images/43.jpg' },
+      { id: 'p04', name: 'name 4', price: 400, photo: 'https://mdbootstrap.com/img/Photos/Others/images/43.jpg' },
+      { id: 'p05', name: 'name 5', price: 500, photo: 'https://mdbootstrap.com/img/Photos/Others/images/43.jpg' },
+      { id: 'p06', name: 'name 6', price: 600, photo: 'https://mdbootstrap.com/img/Photos/Others/images/43.jpg' }
   ];
-  /*$(document).ready(function() {
-    alert("hello")
-    });
-  $('.carousel.carousel-multi-item.v-2 .carousel-item').each(function(){
-    alert("i am code")
-    var next = $(this).next();
-    if (!next.length) {
-      next = $(this).siblings(':first');
+
+  }
+    addToCart(newProduct){
+        this.cartData.push(newProduct)
+        
+        this.productservice.addProductToCart(newProduct)
+        console.log("product-list",this.cartData)
     }
-    next.children(':first-child').clone().appendTo($(this));
-  
-    for (var i=0;i<4;i++) {
-      next=next.next();
-      if (!next.length) {
-        next=$(this).siblings(':first');
-      }
-      next.children(':first-child').clone().appendTo($(this));
-    }
-  });
-  
-*/
 }
 
-}
+

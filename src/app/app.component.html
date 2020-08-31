@@ -1,4 +1,6 @@
 <body id="body">
+  <div *ngFor="let val of value">
+  </div>
 <!--Navbar-->
 <div id="navbar">
 <mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark unique-color fixed-top" [containerInside]="false">
@@ -14,12 +16,7 @@
       <li class="nav-item dropdown" dropdown>
         <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
           About<span class="caret"></span></a>
-        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">App design</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Mobile design</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Eccomerce app</a>
-          
-        </div>
+       
       </li>
       <li class="nav-item">
         <a class="nav-link waves-light" routerLink="/contact-page" routerLinkActive="active" mdbWavesEffect>Contact-us</a>
@@ -32,12 +29,7 @@
       <li class="nav-item dropdown" dropdown>
         <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light" mdbWavesEffect>
           Our Products<span class="caret"></span></a>
-        <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">App design</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Mobile design</a>
-          <a class="dropdown-item waves-light" mdbWavesEffect href="#">Eccomerce app</a>
-          
-        </div>
+        
       </li>
 
      <li>
@@ -49,15 +41,17 @@
 
     <ul id="Login" class="navbar-nav ml- nav-flex-icons">
       <li class="nav-item">
-        <a class="nav-link" routerLink="/register-page"    routerLinkActive="active"> <mat-icon>add_shopping_cart</mat-icon>
+        <a class="nav-link" routerLink="/cart" routerLinkActive="active"> <mat-icon>add_shopping_cart</mat-icon>
           Cart</a>
       </li>
-
+      <li class="nav-item">
+        <span class="badge badge-dark">{{value.length}}</span>
+      </li>
       <li class="nav-item">
         <a style="display: block;"class="nav-link"  routerLink="/login-page" routerLinkActive="active" > <mat-icon>account_box</mat-icon><span>Login</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" routerLink="/register-page"    routerLinkActive="active"> <mat-icon>how_to_reg</mat-icon>Sign-up</a>
+        <a class="nav-link" routerLink="/register-page"  routerLinkActive="active"> <mat-icon>how_to_reg</mat-icon>Sign-up</a>
       </li>
       
     </ul>
@@ -68,16 +62,7 @@
 <!--/.Navbar-->
 
 
-  <div class="dropdown">
-    <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-      Dropdown button
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" href="#">Action</a>
-      <a class="dropdown-item" href="#">Another action</a>
-      <a class="dropdown-item" href="#">Something else here</a>
-    </div>
-  </div>
+
 
 <!--/.Navbar-->
 

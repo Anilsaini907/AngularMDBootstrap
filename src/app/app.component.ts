@@ -27,8 +27,9 @@ gotoList() {
   showValue(){
   this.value=JSON.parse(localStorage.getItem('Users'))
   }
-  
+ 
   ngOnInit(): void {
     this.showValue()
+  
 }
 }

@@ -56,7 +56,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {OverlayModule} from '@angular/cdk/overlay';
-
+import { AgmCoreModule } from '@agm/core';
 
 @NgModule({
   declarations: [
@@ -110,6 +110,10 @@ import {OverlayModule} from '@angular/cdk/overlay';
     OverlayModule,
     PortalModule,
     ScrollingModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'YOUR-API-KEY-HERE',
+      libraries: ['places']
+    }),
    
     FormsModule ,NgbModule,BrowserAnimationsModule,ReactiveFormsModule, ProductModule, UserModule,RouterModule,MatIconModule,MDBBootstrapModule,AppRoutingModule
   ],

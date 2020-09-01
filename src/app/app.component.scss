@@ -1,7 +1,26 @@
 
- span {
-   padding-right: 5px;
-   
+
+.dropdown {
+   display: inline;
+   z-index: 2;
+  
+}
+
+#listproduct{
+   margin:5px;
+}
+#listproduct ul{
+   margin-top: -19px;
+ 
+}
+.mydropdowncss:hover .dropdown-menu {
+   display: block;
+   margin-top: 0; // remove the gap so it doesn't close
+}
+
+
+li{
+   padding: 3px;
 }
 #navbarMain{
    height: 20px;

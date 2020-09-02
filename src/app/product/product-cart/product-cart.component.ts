@@ -9,14 +9,19 @@ import { ValueConverter } from '@angular/compiler/src/render3/view/template';
   styleUrls: ['./product-cart.component.scss']
 })
 export class ProductCartComponent implements OnInit {
-  value:any=[];
+  value:Product[]=[];
   sumTotal:number=0;
   datalocal:any=[];
- 
+ a:number=0;
 constructor(private productservice:ProductService ) { }
 showValue(){
 this.value=JSON.parse(localStorage.getItem('Users'))
-console.log(this.value[0].price)
+for( this.a=0;this.a<=this.value.length;this.a++){
+  console.log(this.value.length)
+  this.sumTotal+=this.value[this.a].price
+  console.log(this.sumTotal)
+}
+
 }
 deleteItem(index,i) {
   this.value.splice(index, 1);
